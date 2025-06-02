@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBook and AudioBook Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .book-section {
+            margin-bottom: 40px;
+        }
+        .book-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .book-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .book-title {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .book-links {
+            display: flex;
+            gap: 10px;
+        }
+        .book-link {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .book-link:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>eBook and AudioBook Collection</h1>
+        
+        <div class="book-section">
+            <div class="book-list">
+                <div class="book-item">
+                    <h2 class="book-title">The Great Jellybean Sky Race</h2>
+                    <div class="book-links">
+                        <a href="static/books/The_Great_Jellybean_Sky_Race.txt" class="book-link">Read eBook</a>
+                        <a href="static/audio/The_Great_Jellybean_Sky_Race.mp3" class="book-link">Listen to AudioBook</a>
+                    </div>
+                </div>
+                
+                <div class="book-item">
+                    <h2 class="book-title">The Last Breath</h2>
+                    <div class="book-links">
+                        <a href="static/books/The_Last_Breath.txt" class="book-link">Read eBook</a>
+                        <a href="static/audio/The_Last_Breath.mp3" class="book-link">Listen to AudioBook</a>
+                    </div>
+                </div>
+                
+                <div class="book-item">
+                    <h2 class="book-title">The Last Cup of Tea</h2>
+                    <div class="book-links">
+                        <a href="static/books/The_Last_Cup_of_Tea.txt" class="book-link">Read eBook</a>
+                        <a href="static/audio/The_Last_Cup_of_Tea.mp3" class="book-link">Listen to AudioBook</a>
+                    </div>
+                </div>
+                
+                <div class="book-item">
+                    <h2 class="book-title">The Realm of Echoes</h2>
+                    <div class="book-links">
+                        <a href="static/books/The_Realm_of_Echoes.txt" class="book-link">Read eBook</a>
+                        <a href="static/audio/The_Realm_of_Echoes.mp3" class="book-link">Listen to AudioBook</a>
+                    </div>
+                </div>
+                
+                <div class="book-item">
+                    <h2 class="book-title">Waffles the Rabbit Finds a Hat</h2>
+                    <div class="book-links">
+                        <a href="static/books/Waffles_the_Rabbit_Finds_a_Hat.txt" class="book-link">Read eBook</a>
+                        <a href="static/audio/Waffles_the_Rabbit_Finds_a_Hat.mp3" class="book-link">Listen to AudioBook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
