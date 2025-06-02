@@ -30,8 +30,8 @@ ENV/
 *.swp
 *.swo
 
-# Audio files (if you want to exclude them from git)
-# static/audio/*.mp3
+# Audio files (they can be regenerated)
+static/audio/*.mp3
 
 # OS generated files
 .DS_Store
