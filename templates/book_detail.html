@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.title }} - eBook & AudioBook Library{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='images/' + book.cover_image) }}" 
+                 class="img-fluid rounded" alt="{{ book.title }}">
+        </div>
+        <div class="col-md-8">
+            <h1 class="mb-4">{{ book.title }}</h1>
+            <p class="lead">{{ book.description }}</p>
+            
+            <div class="d-grid gap-3">
+                <a href="{{ url_for('download_ebook', book_id=book.id) }}" 
+                   class="btn btn-primary btn-lg">
+                    <i class="bi bi-download"></i> Download eBook
+                </a>
+                
+                <a href="{{ url_for('download_audio', book_id=book.id) }}" 
+                   class="btn btn-success btn-lg">
+                    <i class="bi bi-volume-up"></i> Download AudioBook
+                </a>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Listen to Preview</h5>
+                        <audio controls class="w-100">
+                            <source src="{{ url_for('static', filename='audio/' + book.audio_file) }}" 
+                                    type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Home - eBook & AudioBook Library{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Welcome to our eBook & AudioBook Library</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for book in books %}
+    <div class="col">
+        <div class="card h-100">
+            <img src="{{ url_for('static', filename='images/' + book.cover_image) }}" 
+                 class="card-img-top" alt="{{ book.title }}"
+                 style="height: 300px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <p class="card-text">{{ book.description }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('book_detail', book_id=book.id) }}" 
+                   class="btn btn-primary w-100">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 

@@ -1,0 +1,65 @@
+/* Custom styles for the eBook & AudioBook Library */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+}
+
+audio {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-img-top {
+        height: 200px !important;
+    }
+}
+
+/* Animation for loading states */
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
